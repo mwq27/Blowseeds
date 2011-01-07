@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="description" content="">
+  <meta name="author" content="">
+<!-- stop robots here while in dev -->
+<meta name="robots" content="noindex" />
+  <title>Blowseeds</title>
+  <%= stylesheet_link_tag :all %>
+ 
+  <%= csrf_meta_tag %>
+</head>
+<!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <body id=""> <!--<![endif]-->
+<!-- Start Head Container -->
+ <div class="container_12 head clearfix">
+    
+      <!-- Logo -->
+      <h1 class="grid_4 logo">
+        <a href="/" class=''>Blowseeds</a>
+      
+      </h1>
+      
+      <!-- Start Navigation -->
+      <div class="grid_7">
+      
+        <ul class="sf-menu">
+          <li><a href="index.html">Home</a>
+            <ul>
+              <li><a href="index.html">Nivo Slider Index</a></li>
+              <li><a href="index_coin_slider.html">Coin Slider Index</a></li>
+              <li><a href="index_video.html">Video Index</a></li>
+              <li><a href="index_static.html">Static Index</a></li>
+            </ul>
+          </li>
+          <li class=""><a href="about.html">About</a>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="text_styles.html">Text Styles</a></li>
+              <li><a href="page_styles.html">Page Styles</a></li>
+              <li><a href="#">Lorem Ipsum</a>
+                <ul>
+                  <li><a href="#">Dolor sit</a></li>
+                  <li><a href="#">Tempor erat</a></li>
+                  <li><a href="#">Dolores diam</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="services.html">Service</a>
+            <ul>
+              <li><a href="services.html">Service Page</a></li>
+              <li><a href="services_detail.html">Service Detail</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+          </li>
+          <li><a href="portfolio.html">Portfolio</a>
+            <ul>
+              <li><a href="portfolio_detail.html">Portfolio Item</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html">Blog</a>
+            <ul>
+              <li><a href="blog_single.html">Blog Post</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      
+      </div><!-- Navigation END -->
+      
+      <!-- Start Social Buttons -->
+      <div class="grid_1">
+               
+        <ul class="social_bookmarks">
+          <li class="facebook"><a href="#" class="" title="Facebook">Facebook</a></li>
+          <li class="twitter"><a href="#" class="" title="Twitter">Twitter</a></li>
+          <li class="rss"><a href="#" class="" title="RSS">RSS</a></li>
+        </ul>
+
+      </div><!-- Social Buttons END -->
+   
+    </div><!-- Head Container END -->
+<!-- Start Header Break Line -->
+    <div class="container_12 head_break">
+      <hr class="grid_12"></hr>
+       <%= debug(params) if Rails.env.development? %>
+    </div><!-- Header Break Line END -->
+    
+    <div class="clear"></div><!-- CLEAR -->
+<%= yield %>
+<div id="fullwidth_footer_border"></div><!-- Footer Border -->
+  
+  <!-- Start Footer Top -->
+  <div id="fullwidth_footer_top">
+    
+    <!-- Start Footer Top Container -->
+    <div class="container_12">
+      
+      <!-- Start Footer Widget About -->
+      <div class="grid_4 footer_widget_about">
+      
+        <h4>About Cocomonio</h4>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labolore magna aliqua. Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labolore magna aliqua.</p>
+        
+        <p>Follow us on the world wide web.</p>
+        
+        <ul class="social_bookmarks_footer">
+          <li class="deviantart"><a href="#" class="" title="DeviantArt">DeviantArt</a></li>
+          <li class="flickr"><a href="#" class="" title="Flickr">Flickr</a></li>
+          <li class="vimeo"><a href="#" class="" title="Vimeo">Vimeo</a></li>
+          <li class="delicious"><a href="#" class="" title="Delicious">Delicious</a></li>
+          <li class="linkedin"><a href="#" class="" title="LinkedIn">LinkedIn</a></li>
+          <li class="twitter"><a href="#" class="" title="Twitter">Twitter</a></li>
+          <li class="facebook"><a href="#" class="" title="Facebook">Facebook</a></li>
+          <li class="rss"><a href="#" class="" title="RSS">RSS Feed</a></li>
+        </ul>
+      
+      </div><!-- Footer Widget About END -->
+    
+      <!-- Start Footer Widget -->
+      <div class="grid_2 footer_widget">
+    
+      <h4>Pages</h4>
+      
+        <ul class="footer_widget_list">
+          <li><a href="#" class="" title="">About</a></li>
+          <li><a href="#" class="" title="">Service</a></li>
+          <li><a href="#" class="" title="">Portfolio</a></li>
+          <li><a href="#" class="" title="">FAQ</a></li>
+          <li><a href="#" class="" title="">Blog</a></li>
+          <li><a href="#" class="" title="">Contact</a></li>
+        </ul>
+      
+      </div><!-- Footer Widget END -->
+    
+      <!-- Start Footer Widget -->
+      <div class="grid_2 footer_widget">
+    
+      <h4>Categories</h4>
+      
+        <ul class="footer_widget_list">
+          <li><a href="#" class="" title="">Apple</a></li>
+          <li><a href="#" class="" title="">CSS3</a></li>
+          <li><a href="#" class="" title="">Development</a></li>
+          <li><a href="#" class="" title="">HTML</a></li>
+          <li><a href="#" class="" title="">JavaScript</a></li>
+          <li><a href="#" class="" title="">Off Topic</a></li>
+          <li><a href="#" class="" title="">SEO</a></li>
+          <li><a href="#" class="" title="">Social Media</a></li>
+          <li><a href="#" class="" title="">Web Design</a></li>
+        </ul>
+      
+      </div><!-- Footer Widget END -->
+    
+      <!-- Start Footer Widget -->
+      <div class="grid_2 footer_widget">
+    
+      <h4>Blogroll</h4>
+      
+        <ul class="footer_widget_list">
+          <li><a href="#" class="" title="">Documentation</a></li>
+          <li><a href="#" class="" title="">Plugins</a></li>
+          <li><a href="#" class="" title="">Suggest Ideas</a></li>
+          <li><a href="#" class="" title="">Support Forum</a></li>
+          <li><a href="#" class="" title="">Themes</a></li>
+          <li><a href="#" class="" title="">WordPress Blog</a></li>
+          <li><a href="#" class="" title="">WordPress Planet</a></li>
+        </ul>
+      
+      </div><!-- Footer Widget END -->
+    
+      <!-- Start Footer Widget -->
+      <div class="grid_2 footer_widget">
+    
+      <h4>Meta</h4>
+      
+        <ul class="footer_widget_list">
+          <li><a href="#" class="" title="">Log In</a></li>
+          <li><a href="#" class="" title="">Entries RSS</a></li>
+          <li><a href="#" class="" title="">Comments RSS</a></li>
+          <li><a href="#" class="" title="">WordPress.org</a></li>
+        </ul>
+      
+      </div><!-- Footer Widget END -->
+    
+    </div><!-- Footer Top Container END -->
+  
+  </div><!-- Footer Top END-->
+  
+  <!-- Start Footer Bottom -->
+  <div id="fullwidth_footer_bottom">
+  
+    <!-- Start Footer Bottom Container -->
+    <div class="container_12">
+          
+          <!-- Start Copyright -->
+      <div class="grid_8 copyright">
+                    
+        <p class="rights">Copyright 2011 by <a href="/" title="blowseeds">blowseeds</a>. All rights reserved.</p>
+            
+      </div><!-- Copyright END -->
+
+    
+            
+                        
+    </div><!-- Footer Bottom Container END -->
+    
+    <!-- Clearfix -->    
+  <div class="clear"></div>
+  
+  </div><!-- Footer Bottom END -->
+  <%= javascript_include_tag 'jquery/jquery1.4.4.min.js' %>
+<%= javascript_include_tag :all %>
+</body>
+</html>

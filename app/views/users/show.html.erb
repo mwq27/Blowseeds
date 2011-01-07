@@ -1,0 +1,33 @@
+<div id="main_content" class="container_12 clearfix">
+
+ <div class="grid_4 box">
+<h1>Profile</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @user.active %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+</div>
+
+ <hr class="grid_12"></hr>
+</div>
