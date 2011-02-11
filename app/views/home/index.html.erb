@@ -4,7 +4,14 @@
     <div class="container_12 teaser static">
       
       <div class="grid_12 ">
-      
+      <% @users.each do |user| %>
+            <tr>
+              <td><%= #user.username 
+                %></td>
+             
+            
+            </tr>
+      <% end %>
         <h1>Lorem ipsum dolor sit amet, sed diam nonumy.</h1>
         
         <img src="/images/static_image.png" title="" alt='' />
@@ -20,37 +27,22 @@
   
   <hr class="grid_12"></hr>
   
-    <!-- Start Box 1 -->
-    <div class="grid_4 box">
-
-      <img class='alignleft' src='/images/blueprint.png' alt=''/>
-      
-      <h2>Clean Layout</h2>
-      
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore eos aliquyam erat, sed diam voluptua sed diam et dolores.</p>
-      
-    </div><!-- Box 1 END -->
     
-    <!-- Start Box 2 -->
-    <div class="grid_4 box">
-
-      <img class='alignleft' src='/images/brush.png' alt=''/>
-      
-      <h2>Modern Design</h2>
-      
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore eos aliquyam erat, sed diam voluptua sed diam et dolores.</p>
-      
-    </div><!-- Box 2 END -->
     
     <!-- Start Box 3 -->
-    <div class="grid_4 box">
+    <div class="grid_12 ">
 
       <img class='alignleft' src='/images/mail.png' alt=''/>
       
-      <h2>Customer Support</h2>
+      <h2>Newest Listings</h2>
       
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore eos aliquyam erat, sed diam voluptua sed diam et dolores.</p>
-      
+<table>
+ <% @users.each do |user| %>
+  <tr>
+      <td><%= link_to user.username, user %></td>
+  </tr>
+<% end %>
+</table>      
     </div><!-- Box 3 END -->
     
     <div class="grid_12 middle">

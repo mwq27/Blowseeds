@@ -9,10 +9,10 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: blowseeds_development
+  database: blowseeds
   pool: 5
   username: root
-  password: deff6e1dcf
+  password: host_deff6e1dcf
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -25,7 +25,7 @@ test:
   database: blowseeds_test
   pool: 5
   username: root
-  password:
+  password: host_deff6e1dcf
   socket: /var/run/mysqld/mysqld.sock
 
 production:
@@ -35,5 +35,5 @@ production:
   database: blowseeds_production
   pool: 5
   username: root
-  password:
+  password: host_deff6e1dcf
   socket: /var/run/mysqld/mysqld.sock

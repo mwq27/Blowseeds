@@ -10,18 +10,41 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110105030021) do
+ActiveRecord::Schema.define(:version => 20110111025053) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "active"
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "title"
+    t.integer  "active"
+    t.integer  "user_id"
+    t.string   "image_url"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.boolean  "active"
+    t.boolean  "active",             :default => true
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "salt"
     t.string   "encrypted_password"
+    t.string   "username"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
-  add_index "users", ["email"], :name => "email_index"
+  add_index "users", ["email", "username"], :name => "new_index"
 
 end

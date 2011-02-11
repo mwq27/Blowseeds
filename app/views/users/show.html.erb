@@ -1,17 +1,26 @@
 <div id="main_content" class="container_12 clearfix">
 
- <div class="grid_4 box">
-<h1>Profile</h1>
+ <div class="grid_8 box">
+<h1>Profile of <%= @user.username %></h1>
 <p id="notice"><%= notice %></p>
 
 <p>
   <b>First name:</b>
-  <%= @user.first_name %>
+  <%= @user.id %>
 </p>
-
+<!--
+<p>
+  <%= gravatar_for @user %>
+  </p>
+-->
 <p>
   <b>Last name:</b>
   <%= @user.last_name %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%= @user.username %>
 </p>
 
 <p>
@@ -24,9 +33,21 @@
   <%= @user.email %>
 </p>
 
+<% if signed_in? && @user.id == current_user.id %>
+  <%= link_to 'Edit Profile', edit_user_path(current_user) %>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<% end %>
+
+<h2>Product Listing</h2>
+<% unless @user.products.empty? %>
+<%= render @products %>
+<%= will_paginate @products %>
+<% end %>
+<% if signed_in? && @user.id == current_user.id %>
+<h2>New Product</h2>
+<%= render 'shared/product_form' %>
+<% end %>
+
 </div>
 
  <hr class="grid_12"></hr>

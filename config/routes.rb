@@ -1,5 +1,9 @@
 Blowseeds::Application.routes.draw do
-  resources :users
+  get "sessions/new"
+
+  resources :users, :categories
+  resources :sessions, :only => [:new, :create, :destroy]
+  resources :products, :only => [:create, :destroy]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -7,6 +11,9 @@ Blowseeds::Application.routes.draw do
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   match '/' => 'home#index'
+  match '/signup',  :to =>  'users#new'
+  match '/signin',  :to =>  'sessions#new'
+  match '/signout', :to =>  'sessions#destroy'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:

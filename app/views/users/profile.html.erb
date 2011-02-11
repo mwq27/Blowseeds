@@ -20,6 +20,7 @@
   <%= @user.email %>
 </p>
 
+<% if signed_in? %>
+  <%= link_to 'Edit Profile', edit_user_path(current_user) %>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<% end %>

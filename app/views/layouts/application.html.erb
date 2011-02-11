@@ -8,7 +8,7 @@
   <meta name="author" content="">
 <!-- stop robots here while in dev -->
 <meta name="robots" content="noindex" />
-  <title>Blowseeds</title>
+  <title><%= @title %></title>
   <%= stylesheet_link_tag :all %>
  
   <%= csrf_meta_tag %>
@@ -31,19 +31,19 @@
       <div class="grid_7">
       
         <ul class="sf-menu">
-          <li><a href="index.html">Home</a>
+          <li><%= link_to 'Home', root_path %>
             <ul>
-              <li><a href="index.html">Nivo Slider Index</a></li>
-              <li><a href="index_coin_slider.html">Coin Slider Index</a></li>
-              <li><a href="index_video.html">Video Index</a></li>
-              <li><a href="index_static.html">Static Index</a></li>
+              <li><a href="#">Nivo Slider Index</a></li>
+              <li><a href="#">Coin Slider Index</a></li>
+              <li><a href="#">Video Index</a></li>
+              <li><a href="#">Static Index</a></li>
             </ul>
           </li>
-          <li class=""><a href="about.html">About</a>
+          <li class=""><a href="#">About</a>
             <ul>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="text_styles.html">Text Styles</a></li>
-              <li><a href="page_styles.html">Page Styles</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Text Styles</a></li>
+              <li><a href="#">Page Styles</a></li>
               <li><a href="#">Lorem Ipsum</a>
                 <ul>
                   <li><a href="#">Dolor sit</a></li>
@@ -53,24 +53,42 @@
               </li>
             </ul>
           </li>
-          <li><a href="services.html">Service</a>
+          <li><%= link_to 'Categories', categories_path %>
             <ul>
-              <li><a href="services.html">Service Page</a></li>
-              <li><a href="services_detail.html">Service Detail</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="#">Service Page</a></li>
+              <li><a href="#">Service Detail</a></li>
+              <li><a href="#">Testimonials</a></li>
             </ul>
           </li>
-          <li><a href="portfolio.html">Portfolio</a>
-            <ul>
-              <li><a href="portfolio_detail.html">Portfolio Item</a></li>
-            </ul>
-          </li>
-          <li><a href="blog.html">Blog</a>
+          
+          <li><a href="#">Blog</a>
             <ul>
               <li><a href="blog_single.html">Blog Post</a></li>
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          
+          <li>
+            
+            <% if signed_in? %>
+            
+          
+              <%= link_to 'Sign Out', signout_path, :method => :delete %>
+            <% else %>
+              <%= link_to 'Sign In', signin_path %>
+            <% end %>
+            
+         </li>
+         
+         <li>
+            <% if signed_in? %>
+                <%= link_to 'Profile', current_user %>
+            <% else %>
+              <%= link_to 'Register', :controller => 'users', :action => "new" %>    
+            <% end %>
+           
+           
+         </li>
+          
         </ul>
       
       </div><!-- Navigation END -->
@@ -90,10 +108,18 @@
 <!-- Start Header Break Line -->
     <div class="container_12 head_break">
       <hr class="grid_12"></hr>
-       <%= debug(params) if Rails.env.development? %>
+       <%=  debug(params) if Rails.env.development? 
+       %>
     </div><!-- Header Break Line END -->
     
     <div class="clear"></div><!-- CLEAR -->
+   
+   <% flash.each do |key, value| %>
+      <div class="flash <%= key %>"><%= value %> 
+        
+      </div>
+      <% end %>
+    
 <%= yield %>
 <div id="fullwidth_footer_border"></div><!-- Footer Border -->
   

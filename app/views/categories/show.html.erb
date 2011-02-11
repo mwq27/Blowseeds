@@ -1,0 +1,22 @@
+<div id="main_content" class="container_12 clearfix">
+
+ <div class="grid_4 box">
+<h1>Category: <%= @category.name %></h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Categories:</b>
+  <%= @category.name %>
+</p>
+
+
+
+<%= #link_to 'Edit', edit_user_path(@user) 
+  link_to 'All Categories', '/categories'
+%> |
+URL: <%= #link_to  users_path(@user), @user 
+%>
+</div>
+
+ <hr class="grid_12"></hr>
+</div>

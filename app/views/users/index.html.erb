@@ -16,10 +16,8 @@
 
 <% @users.each do |user| %>
   <tr>
-    <td><%= user.first_name %></td>
-    <td><%= user.last_name %></td>
-    <td><%= user.active %></td>
-    <td><%= user.email %></td>
+    <td><%= user.username %></td>
+   
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>

@@ -740,7 +740,10 @@ ul.sf-menu li li li:hover ul, ul.sf-menu li li li.sfHover ul { left: 200px; /* m
 	display:block;
 }
 
+#cat-table td{
+  padding:0px 10px;
 
+}
 
 /************************************************************************
 -) PORTFOLIO
@@ -1860,3 +1863,15 @@ blockquote p {
 .right {
 	float: right;
 }
+
+.flash{
+  padding:20px;
+}
+
+.error{
+  background:#FFC7D5;
+  border:1px solid #FF5252;
+  font-weight:bold;
+  font-size:14px;
+}
+

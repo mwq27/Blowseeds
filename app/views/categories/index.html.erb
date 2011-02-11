@@ -1,0 +1,25 @@
+<div id="main_content" class="container_12 clearfix">
+
+ <div class="grid_4 box">
+<h1>Category Listings</h1>
+
+<table id="cat-table">
+ 
+
+<% @categories.each do |category| %>
+  <tr>
+    <td><%= link_to category.name, category %></td>
+    
+    
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New category', new_category_path %>
+</div>
+
+ <hr class="grid_12"></hr>
+
+</div>

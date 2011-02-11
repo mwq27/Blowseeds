@@ -1,9 +1,46 @@
 <div id="main_content" class="container_12 clearfix">
   
    <div class="grid_4 box">
-<h2>New user</h2>
+        <h2>New user</h2>
+        <article id="errors">
+          <%= render 'shared/error_messages', :object => f.object %>
+          
+        </article>
+        <%= form_for(@user) do |f| %>
+          <div class='field'>
+            <%= f.label :first_name %><br/>
+            <%= f.text_field :first_name %>
+          </div>
+          <div class='field'>
+            <%= f.label :last_name %><br/>
+            <%= f.text_field :last_name %>
+          </div>
+          <div class='field'>
+            <%= f.label :username %><br/>
+            <%= f.text_field :username %>
+          </div>
+          
+          <div class='field'>
+            <%= f.label :email %><br/>
+            <%= f.text_field :email %>
+          </div>
+          <div class='field'>
+            <%= f.label :password %><br/>
+            <%= f.password_field :password %>
+          </div>
+          <div class='field'>
+            <%= f.label :password_confirmation, "Confirmation" %><br/>
+            <%= f.password_field :password_confirmation %>
+          </div>
+          
+          <div class='actions'>
+            <%= f.submit "Sign Up" %>
+          </div>
+          
+          <% end %>
+          
+  
 
-<%= render 'form' %>
 
 <%= link_to 'Back', users_path %>
 </div>

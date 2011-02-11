@@ -1,0 +1,43 @@
+<div id="main_content" class="container_12 clearfix">
+  
+   <div class="grid_4 box">
+        <h2>New user</h2>
+        <article id="errors">
+          <%= render 'shared/error_messages' %>
+          
+        </article>
+        <%= form_for :user, @user, :url => user_path, :html => { :multipart => true } do |f|  %>
+          <div class='field'>
+            <%= f.label :title %><br/>
+            <%= f.text_field :title %>
+          </div>
+          <div class='field'>
+            <%= f.file_field :image %>
+          </div>
+          
+          <div class='field'>
+            <%= f.label :description %><br/>
+            <%= f.text_area :description %>
+          </div>
+          <div class='field'>
+            <%= f.label :username %><br/>
+            <%= f.text_field :username %>
+          </div>
+          
+          
+          <div class='actions'>
+            <%= f.submit "Add Item" %>
+          </div>
+          
+          <% end %>
+          
+  
+
+
+<%= link_to 'Back', users_path %>
+</div>
+
+ <hr class="grid_12"></hr>
+
+</div>
+

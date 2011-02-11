@@ -1,0 +1,30 @@
+<div id="main_content" class="container_12 clearfix">
+  
+   <div class="grid_4 box">
+        <h2>New Category</h2>
+        <article id="errors">
+          <%= render 'shared/error_messages' 
+          %>
+        </article>
+        <%= form_for(@category) do |f| %>
+          <div class='field'>
+            <%= f.label :name %><br/>
+            <%= f.text_field :name %>
+          </div>
+                   
+          <div class='actions'>
+            <%= f.submit "Add Category" %>
+          </div>
+          
+          <% end %>
+          
+  
+
+
+<%= #link_to 'Back', category_path 
+%>
+</div>
+
+ <hr class="grid_12"></hr>
+
+</div>
