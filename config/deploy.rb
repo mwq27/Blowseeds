@@ -1,11 +1,13 @@
 set :user, "root"
 set :project, "Blowseeds"
 set :application, "blowseeds.com"
-set :repository,  "git@blowseeds.sourcerepo.com:blowseeds/blowseeds.git"
+set :repository, "/var/www/repositories/blowseeds"
+set :local_repository,  "git@blowseeds.sourcerepo.com:blowseeds/blowseeds.git"
 set :applicationdir, "/var/www/"
 
-set :scm, "git"
+set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
+
 
 role :web, "blowseeds.com"                          # Your HTTP server, Apache/etc
 role :app, "blowseeds.com"                          # This may be the same as your `Web` server
